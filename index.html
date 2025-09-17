@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SchedTrack - Timetable Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>📅 SchedTrack - Timetable Generator</h1>
+
+        <form id="timetableForm">
+            <h2>Faculty</h2>
+            <div id="faculty-section"></div>
+            <button type="button" onclick="addFaculty()">+ Add Faculty</button>
+
+            <h2>Subjects</h2>
+            <div id="subject-section"></div>
+            <button type="button" onclick="addSubject()">+ Add Subject</button>
+
+            <h2>Classrooms</h2>
+            <div id="classroom-section"></div>
+            <button type="button" onclick="addClassroom()">+ Add Classroom</button>
+
+            <br><br>
+            <button type="submit">Generate Timetable</button>
+        </form>
+
+        <div id="result">
+            <h2>Generated Timetable</h2>
+            <pre id="timetableOutput">No timetable generated yet.</pre>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
